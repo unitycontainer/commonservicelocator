@@ -28,8 +28,6 @@ using System.Security;
 [assembly: Guid("ead99581-ffd4-44dd-a45b-1d8322dcfb8c")]
 
 [assembly: CLSCompliant(true)]
-
-[assembly: AllowPartiallyTrustedCallers]
 [assembly: SecurityTransparent]
 
 // Version information for an assembly consists of the following four values:
