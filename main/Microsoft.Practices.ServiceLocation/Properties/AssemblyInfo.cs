@@ -19,6 +19,7 @@ using System.Security;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
+#if !PORTABLE
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
@@ -26,7 +27,7 @@ using System.Security;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("ead99581-ffd4-44dd-a45b-1d8322dcfb8c")]
-
+#endif
 [assembly: CLSCompliant(true)]
 [assembly: SecurityTransparent]
 
