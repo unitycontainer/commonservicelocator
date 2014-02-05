@@ -1,3 +1,6 @@
+using System;
+using Microsoft.Practices.ServiceLocation.Properties;
+
 namespace Microsoft.Practices.ServiceLocation
 {
     /// <summary>
@@ -14,7 +17,12 @@ namespace Microsoft.Practices.ServiceLocation
         /// </summary>
         public static IServiceLocator Current
         {
-            get { return currentProvider(); }
+            get 
+            {
+                if (!IsLocationProviderSet) throw new InvalidOperationException(Resources.ServiceLocationProviderNotSetMessage);
+
+                return currentProvider(); 
+            }
         }
 
         /// <summary>
@@ -25,6 +33,14 @@ namespace Microsoft.Practices.ServiceLocation
         public static void SetLocatorProvider(ServiceLocatorProvider newProvider)
         {
             currentProvider = newProvider;
+        }
+
+        public static bool IsLocationProviderSet
+        {
+            get
+            {
+                return currentProvider != null;
+            }
         }
     }
 }

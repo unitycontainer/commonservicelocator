@@ -112,17 +112,21 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActivateAllExceptionMessage" xml:space="preserve">
-    <value>Activation error occured while trying to get all instances of type {0}</value>
+    <value>Activation error occurred while trying to get all instances of type {0}</value>
     <comment>Message shown if an exception occurs during a GetAllInstances call</comment>
   </data>
   <data name="ActivationExceptionMessage" xml:space="preserve">
-    <value>Activation error occured while trying to get instance of type {0}, key "{1}"</value>
+    <value>Activation error occurred while trying to get instance of type {0}, key "{1}"</value>
     <comment>Message shown on exception in GetInstance method</comment>
+  </data>
+  <data name="ServiceLocationProviderNotSetMessage" xml:space="preserve">
+    <value>ServiceLocationProvider must be set.</value>
+    <comment>Message shown if ServiceLocator.Current called before ServiceLocationProvider is set.</comment>
   </data>
 </root>
