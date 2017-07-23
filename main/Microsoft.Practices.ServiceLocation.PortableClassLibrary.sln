@@ -1,28 +1,54 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26711.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Practices.ServiceLocation.PortableClassLibrary", "Microsoft.Practices.ServiceLocation.PortableClassLibrary\Microsoft.Practices.ServiceLocation.PortableClassLibrary.csproj", "{610653AE-B766-4AD1-A5C6-865246206B8F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLocation.Tests", "ServiceLocation.Tests\ServiceLocation.Tests.csproj", "{E8106FBA-F925-45CF-9DEB-90806B3E8DBE}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Microsoft.Practices.ServiceLocation.Share", "Microsoft.Practices.ServiceLocation.Share\Microsoft.Practices.ServiceLocation.Share.shproj", "{79B21D9E-2DFF-4406-9713-961C549DAAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Practices.ServiceLocation.Full", "Microsoft.Practices.ServiceLocation.Full\Microsoft.Practices.ServiceLocation.Full.csproj", "{9A73A0E0-2C4F-4581-8059-68A5481F782F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Practices.ServiceLocation.St1", "Microsoft.Practices.ServiceLocation.St1\Microsoft.Practices.ServiceLocation.St1.csproj", "{F1B14E16-AF88-437D-AFFA-DFED893F638C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Practices.ServiceLocation.St2", "Microsoft.Practices.ServiceLocation.St2\Microsoft.Practices.ServiceLocation.St2.csproj", "{C32D9B37-D154-4807-8068-808121912115}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03FE6EF1-1E71-4735-8201-B6303D27B29D}"
+	ProjectSection(SolutionItems) = preProject
+		CommonServiceLocator.nuspec = CommonServiceLocator.nuspec
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Microsoft.Practices.ServiceLocation.Share\Microsoft.Practices.ServiceLocation.Share.projitems*{79b21d9e-2dff-4406-9713-961c549daaf3}*SharedItemsImports = 13
+		Microsoft.Practices.ServiceLocation.Share\Microsoft.Practices.ServiceLocation.Share.projitems*{9a73a0e0-2c4f-4581-8059-68a5481f782f}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{610653AE-B766-4AD1-A5C6-865246206B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{610653AE-B766-4AD1-A5C6-865246206B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{610653AE-B766-4AD1-A5C6-865246206B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{610653AE-B766-4AD1-A5C6-865246206B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E8106FBA-F925-45CF-9DEB-90806B3E8DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8106FBA-F925-45CF-9DEB-90806B3E8DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8106FBA-F925-45CF-9DEB-90806B3E8DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8106FBA-F925-45CF-9DEB-90806B3E8DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A73A0E0-2C4F-4581-8059-68A5481F782F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A73A0E0-2C4F-4581-8059-68A5481F782F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A73A0E0-2C4F-4581-8059-68A5481F782F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A73A0E0-2C4F-4581-8059-68A5481F782F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B14E16-AF88-437D-AFFA-DFED893F638C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B14E16-AF88-437D-AFFA-DFED893F638C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B14E16-AF88-437D-AFFA-DFED893F638C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B14E16-AF88-437D-AFFA-DFED893F638C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C32D9B37-D154-4807-8068-808121912115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32D9B37-D154-4807-8068-808121912115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32D9B37-D154-4807-8068-808121912115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32D9B37-D154-4807-8068-808121912115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01B859FE-C55C-4D90-B522-27884533C7CD}
 	EndGlobalSection
 EndGlobal
