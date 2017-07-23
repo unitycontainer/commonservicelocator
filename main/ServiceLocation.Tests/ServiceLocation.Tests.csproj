@@ -57,9 +57,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.Practices.ServiceLocation.PortableClassLibrary\Microsoft.Practices.ServiceLocation.PortableClassLibrary.csproj">
-      <Project>{610653ae-b766-4ad1-a5c6-865246206b8f}</Project>
-      <Name>Microsoft.Practices.ServiceLocation.PortableClassLibrary</Name>
+    <ProjectReference Include="..\Microsoft.Practices.ServiceLocation.Full\Microsoft.Practices.ServiceLocation.Full.csproj">
+      <Project>{9a73a0e0-2c4f-4581-8059-68a5481f782f}</Project>
+      <Name>Microsoft.Practices.ServiceLocation.Full</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
