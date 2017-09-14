@@ -31,7 +31,7 @@ dotnet_csproj:
   
 
 test_script:
-- OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -filter:"+[*]* -[*]Microsoft.Practices.ServiceLocation.Properties -[UnitTests*]*"
+- OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -filter:"+[*]* -[*]*.ServiceLocation.Properties -[UnitTests*]*"
 - codecov -f "results.xml"  
 
 artifacts:
