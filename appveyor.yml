@@ -18,7 +18,7 @@ before_build:
 - choco install codecov
 
 build:
-  project: Package.sln
+  project: package.sln
   parallel: true
   verbosity: minimal
 

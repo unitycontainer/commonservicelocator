@@ -15,9 +15,9 @@
     <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
 
-  <PropertyGroup Condition="Exists('CommonServiceLocator.2.snk')">
+  <PropertyGroup Condition="Exists('..\package.snk')">
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>CommonServiceLocator.2.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\package.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
