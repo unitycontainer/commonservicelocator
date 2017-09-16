@@ -10,7 +10,7 @@
     <Copyright>Copyright © Microsoft 2008</Copyright>
     <PackageProjectUrl>https://github.com/IoC-Unity/CommonServiceLocator</PackageProjectUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
-    <PackageReleaseNotes>This release adds support for .NET Standard 1.0 as well as .NET 3.5, 4.0, and 4.7</PackageReleaseNotes>
+    <PackageReleaseNotes>This release adds support for .NET Standard 1.0 as well as .NET 3.5, 4.0, 4.5, and 4.7</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/IoC-Unity/CommonServiceLocator</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
