@@ -35,7 +35,7 @@ test_script:
 - codecov -f "results.xml"  
 
 artifacts:
-- path: '**\Microsoft.Practices.ServiceLocation.*.nupkg'
+- path: '**\CommonServiceLocator.*.nupkg'
   name: 'CommonServiceLocator'
 
 deploy:
