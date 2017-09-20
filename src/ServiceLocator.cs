@@ -1,5 +1,5 @@
+using CommonServiceLocator.Properties;
 using System;
-using Microsoft.Practices.ServiceLocation.Properties;
 
 namespace Microsoft.Practices.ServiceLocation
 {

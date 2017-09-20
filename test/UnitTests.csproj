@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Microsoft.Practices.ServiceLocation.csproj" />
+    <ProjectReference Include="..\src\CommonServiceLocator.csproj" />
   </ItemGroup>
 
 </Project>

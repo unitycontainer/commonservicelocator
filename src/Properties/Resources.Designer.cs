@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.Practices.ServiceLocation.Properties {
+namespace CommonServiceLocator.Properties {
     using System;
     using System.Reflection;
 
@@ -40,11 +40,7 @@ namespace Microsoft.Practices.ServiceLocation.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-#if NETSTANDARD1_0
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.Practices.ServiceLocation.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
-#else
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.Practices.ServiceLocation.Properties.Resources", typeof(Resources).Assembly);
-#endif
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CommonServiceLocator.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

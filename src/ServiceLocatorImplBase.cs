@@ -1,7 +1,7 @@
+using CommonServiceLocator.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.Practices.ServiceLocation.Properties;
 
 namespace Microsoft.Practices.ServiceLocation
 {
