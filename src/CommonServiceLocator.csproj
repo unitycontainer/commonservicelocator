@@ -14,6 +14,8 @@
     <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/unitycontainer/commonservicelocator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <Authors>Microsoft.Practices.ServiceLocation</Authors>
+    <Company>Microsoft.Practices.ServiceLocation</Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="Exists('..\package.snk')">
