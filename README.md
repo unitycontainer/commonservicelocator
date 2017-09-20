@@ -1,8 +1,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/dax8w8u3d5c6kv0a/branch/master?svg=true)](https://ci.appveyor.com/project/IoC-Unity/commonservicelocator/branch/master)
 [![codecov](https://codecov.io/gh/unitycontainer/commonservicelocator/branch/master/graph/badge.svg)](https://codecov.io/gh/unitycontainer/commonservicelocator)
 [![license](https://img.shields.io/badge/license-ms-pl.svg)](https://opensource.org/licenses/MS-PL)
-[![NuGet](https://img.shields.io/nuget/dt/commonservicelocator.svg)](https://www.nuget.org/packages/commonservicelocator)
-[![NuGet](https://img.shields.io/nuget/v/commonservicelocator.svg)](https://www.nuget.org/packages/commonservicelocator)
+[![NuGet](https://img.shields.io/nuget/dt/commonservicelocator.svg)](https://www.nuget.org/packages/CommonServiceLocator)
+[![NuGet](https://img.shields.io/nuget/v/commonservicelocator.svg)](https://www.nuget.org/packages/CommonServiceLocator)
 
 This file explains the expected semantics IServiceLocator implementations must implement to properly conform to this interface, and a few implementation notes.
 
