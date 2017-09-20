@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CommonServiceLocator</PackageId>
     <Description>A simple facade that provides insulation from specific IoC containers</Description>
-    <PackageReleaseNotes>This release supports .NET Core 1.0, .NET 4.0, 4.5, and 4.7</PackageReleaseNotes>
+    <PackageReleaseNotes>This release supports .NET 4.0, 4.5, and 4.7, .NET Core 1.0, and .NET Standard 2.0 </PackageReleaseNotes>
     <Version>1.4.0</Version>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <FileVersion>1.4.0.0</FileVersion>
