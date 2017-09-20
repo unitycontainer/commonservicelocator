@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/myo4eod0gf273062/branch/master?svg=true)](https://ci.appveyor.com/project/IoC-Unity/commonservicelocator/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/mmmf9u6rako4ykxb/branch/master?svg=true)](https://ci.appveyor.com/project/unitycontainer/commonservicelocator-2furb/branch/master)
 [![codecov](https://codecov.io/gh/IoC-Unity/CommonServiceLocator/branch/master/graph/badge.svg)](https://codecov.io/gh/IoC-Unity/CommonServiceLocator)
 [![license](https://img.shields.io/badge/license-ms-pl.svg)](https://opensource.org/licenses/MS-PL)
 [![NuGet](https://img.shields.io/nuget/dt/Microsoft.Practices.ServiceLocation.svg)](https://www.nuget.org/packages/Microsoft.Practices.ServiceLocation)
