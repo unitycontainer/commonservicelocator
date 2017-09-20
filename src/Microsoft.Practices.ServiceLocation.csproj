@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net40;net45;net47;netcoreapp1.0;netstandard1.0</TargetFrameworks>
+    <TargetFrameworks>net40;net45;net47;netcoreapp1.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CommonServiceLocator</PackageId>
     <Description>A simple facade that provides insulation from specific IoC containers</Description>
@@ -22,7 +22,7 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.0' ">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' ">
     <Compile Remove="ActivationException.Desktop.cs" />
   </ItemGroup>
 
