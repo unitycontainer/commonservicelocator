@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Microsoft.Practices.ServiceLocation
+namespace CommonServiceLocator
 {
     [Serializable]
     public partial class ActivationException
@@ -21,6 +21,7 @@ namespace Microsoft.Practices.ServiceLocation
         /// <exception cref="T:System.Runtime.Serialization.SerializationException">
         /// The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). 
         /// </exception>
-        protected ActivationException(SerializationInfo info, StreamingContext context) : base(info, context) {}
+        protected ActivationException(SerializationInfo info, StreamingContext context)
+            : base(info, context) {}
     }
 }

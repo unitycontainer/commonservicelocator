@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Microsoft.Practices.ServiceLocation
+namespace CommonServiceLocator
 {
     /// <summary>
     /// The generic Service Locator interface. This interface is used

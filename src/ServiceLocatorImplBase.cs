@@ -1,9 +1,9 @@
-using CommonServiceLocator.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using CommonServiceLocator.Properties;
 
-namespace Microsoft.Practices.ServiceLocation
+namespace CommonServiceLocator
 {
     /// <summary>
     /// This class is a helper that provides a default implementation

@@ -11,8 +11,8 @@
 namespace CommonServiceLocator.Properties {
     using System;
     using System.Reflection;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -62,7 +62,7 @@ namespace CommonServiceLocator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activation error occurred while trying to get all instances of type {0}.
+        ///   Looks up a localized string similar to Activation error occurred while trying to get all instances of type {0} .
         /// </summary>
         internal static string ActivateAllExceptionMessage {
             get {

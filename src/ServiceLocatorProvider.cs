@@ -1,4 +1,4 @@
-namespace Microsoft.Practices.ServiceLocation
+namespace CommonServiceLocator
 {
     /// <summary>
     /// This delegate type is used to provide a method that will

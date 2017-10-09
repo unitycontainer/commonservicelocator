@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace System.Reflection
 {
@@ -11,7 +12,7 @@ namespace System.Reflection
 
         internal TypeInfo(Type type)
         {
-            _type = type;
+            _type = type ?? throw new ArgumentNullException(nameof(type));
         }
 
 
@@ -44,8 +45,6 @@ namespace System.Reflection
         public bool IsValueType => _type.IsValueType;
 
         public bool ContainsGenericParameters => _type.ContainsGenericParameters;
-
-
 
         #region moved over from Type
 
@@ -163,6 +162,26 @@ namespace System.Reflection
 
 
         #endregion
+
+        public override int GetHashCode()
+        {
+            return _type.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return _type.Equals(obj);
+        }
+
+        public static bool operator ==(TypeInfo left, TypeInfo right)
+        {
+            return left?.GetHashCode() == right?.GetHashCode();
+        }
+
+        public static bool operator !=(TypeInfo left, TypeInfo right)
+        {
+            return left?.GetHashCode() != right?.GetHashCode();
+        }
 
     }
 

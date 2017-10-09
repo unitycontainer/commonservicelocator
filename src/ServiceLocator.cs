@@ -1,7 +1,7 @@
-using CommonServiceLocator.Properties;
 using System;
+using CommonServiceLocator.Properties;
 
-namespace Microsoft.Practices.ServiceLocation
+namespace CommonServiceLocator
 {
     /// <summary>
     /// This class provides the ambient container for this application. If your
@@ -10,7 +10,7 @@ namespace Microsoft.Practices.ServiceLocation
     /// </summary>
     public static class ServiceLocator
     {
-        private static ServiceLocatorProvider currentProvider;
+        private static ServiceLocatorProvider _currentProvider;
 
         /// <summary>
         /// The current ambient container.
@@ -21,7 +21,7 @@ namespace Microsoft.Practices.ServiceLocation
             {
                 if (!IsLocationProviderSet) throw new InvalidOperationException(Resources.ServiceLocationProviderNotSetMessage);
 
-                return currentProvider(); 
+                return _currentProvider(); 
             }
         }
 
@@ -32,15 +32,9 @@ namespace Microsoft.Practices.ServiceLocation
         /// the current ambient container.</param>
         public static void SetLocatorProvider(ServiceLocatorProvider newProvider)
         {
-            currentProvider = newProvider;
+            _currentProvider = newProvider;
         }
 
-        public static bool IsLocationProviderSet
-        {
-            get
-            {
-                return currentProvider != null;
-            }
-        }
+        public static bool IsLocationProviderSet => _currentProvider != null;
     }
 }

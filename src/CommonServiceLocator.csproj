@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net40;net45;net47;netcoreapp1.0;netstandard2.0</TargetFrameworks>
+    <Version>2.0.1</Version>
+    <FileVersion>2.0.1.0</FileVersion>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CommonServiceLocator</PackageId>
+    <Summary>The Common Service Locator library contains a shared interface for service location. The library provides an abstraction over IoC containers and service locators.</Summary>
     <Description>The Common Service Locator library contains a shared interface for service location which application and framework developers can reference. The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references. The hope is that using this library, third-party applications and frameworks can begin to leverage IoC/Service Location without tying themselves down to a specific implementation.</Description>
-    <PackageReleaseNotes>This release contains a portable class library that targets .NET 4.0, 4.5, and 4.7, .NET Core 1.0, and .NET Standard 2.0
-</PackageReleaseNotes>
-    <Version>2.0.0</Version>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <FileVersion>2.0.0.0</FileVersion>
+    <PackageReleaseNotes>This release contains a portable class library that targets .NET 4.0, 4.5, and 4.7, .NET Core 1.0, and .NET Standard 2.0</PackageReleaseNotes>
     <Copyright>Copyright © Microsoft 2008</Copyright>
     <PackageProjectUrl>https://github.com/unitycontainer/commonservicelocator</PackageProjectUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
@@ -25,14 +25,14 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard1.0'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard2.0'">
     <Compile Remove="ActivationException.Desktop.cs" />
   </ItemGroup>
 
   <PropertyGroup>
     <DebugType Condition="'$(TargetFramework)' != '' AND !$(TargetFramework.StartsWith('netcoreapp'))">Full</DebugType>
-    <AssemblyName>Microsoft.Practices.ServiceLocation</AssemblyName>
-    <RootNamespace>Microsoft.Practices.ServiceLocation</RootNamespace>
+    <AssemblyName>CommonServiceLocator</AssemblyName>
+    <RootNamespace>CommonServiceLocator</RootNamespace>
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/12849707</PackageIconUrl>
     <PackageTags>Microsoft.Practices.ServiceLocation</PackageTags>
     <Product>Microsoft.Practices.ServiceLocation</Product>

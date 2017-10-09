@@ -1,6 +1,6 @@
 using System;
 
-namespace Microsoft.Practices.ServiceLocation
+namespace CommonServiceLocator
 {
     /// <summary>
     /// The standard exception thrown when a ServiceLocator has an error in resolving an object.
