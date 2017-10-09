@@ -1,6 +1,6 @@
 ﻿using System;
+using CommonServiceLocator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.Practices.ServiceLocation;
 using ServiceLocation.Tests.Mocks;
 
 namespace ServiceLocation.Tests
