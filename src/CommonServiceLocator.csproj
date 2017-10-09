@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <DebugType Condition="'$(TargetFramework)' != '' AND !$(TargetFramework.StartsWith('netcoreapp'))">Full</DebugType>
+    <DebugType>Full</DebugType>
     <AssemblyName>CommonServiceLocator</AssemblyName>
     <RootNamespace>CommonServiceLocator</RootNamespace>
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/12849707</PackageIconUrl>
