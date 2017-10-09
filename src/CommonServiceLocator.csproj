@@ -8,7 +8,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CommonServiceLocator</PackageId>
     <Summary>The Common Service Locator library contains a shared interface for service location. The library provides an abstraction over IoC containers and service locators.</Summary>
-    <Description>The Common Service Locator library contains a shared interface for service location which application and framework developers can reference. The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references. The hope is that using this library, third-party applications and frameworks can begin to leverage IoC/Service Location without tying themselves down to a specific implementation.</Description>
+    <Description>The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references.</Description>
     <PackageReleaseNotes>This release contains a portable class library that targets .NET 4.0, 4.5, and 4.7, .NET Core 1.0, and .NET Standard 2.0</PackageReleaseNotes>
     <Copyright>Copyright © Microsoft 2008</Copyright>
     <PackageProjectUrl>https://github.com/unitycontainer/commonservicelocator</PackageProjectUrl>
