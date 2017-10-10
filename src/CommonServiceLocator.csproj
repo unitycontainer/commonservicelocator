@@ -4,8 +4,6 @@
     <Version>2.0.1</Version>
     <FileVersion>2.0.1.0</FileVersion>
     <AssemblyVersion>2.0.1.0</AssemblyVersion>
-    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CommonServiceLocator</PackageId>
     <Summary>The Common Service Locator library contains a shared interface for service location. The library provides an abstraction over IoC containers and service locators.</Summary>
     <Description>The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references.</Description>
@@ -14,12 +12,16 @@
     <PackageProjectUrl>https://github.com/unitycontainer/commonservicelocator</PackageProjectUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/unitycontainer/commonservicelocator</RepositoryUrl>
+    <PackageIconUrl>https://avatars1.githubusercontent.com/u/12849707</PackageIconUrl>
+    <PackageTags>Microsoft.Practices.ServiceLocation</PackageTags>
+    <Product>Microsoft.Practices.ServiceLocation</Product>
     <RepositoryType>git</RepositoryType>
     <Authors>Microsoft.Practices.ServiceLocation</Authors>
     <Company>Microsoft.Practices.ServiceLocation</Company>
+    <RootNamespace>CommonServiceLocator</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Condition="Exists('..\package.snk')">
+  <PropertyGroup>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\package.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
@@ -29,13 +31,15 @@
     <Compile Remove="ActivationException.Desktop.cs" />
   </ItemGroup>
 
-  <PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugType>Full</DebugType>
-    <AssemblyName>CommonServiceLocator</AssemblyName>
-    <RootNamespace>CommonServiceLocator</RootNamespace>
-    <PackageIconUrl>https://avatars1.githubusercontent.com/u/12849707</PackageIconUrl>
-    <PackageTags>Microsoft.Practices.ServiceLocation</PackageTags>
-    <Product>Microsoft.Practices.ServiceLocation</Product>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' != '' AND '$(TargetFramework)' != 'net40' ">
