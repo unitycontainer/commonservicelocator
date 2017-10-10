@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonServiceLocator", "src\CommonServiceLocator.csproj", "{FAF6D6B2-1EC9-4A1B-83BB-48F772E948CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "test\UnitTests.csproj", "{69BC47D2-947A-43BC-A3AB-B810CB2FAE62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonServiceLocator.Tests", "test\CommonServiceLocator.Tests.csproj", "{69BC47D2-947A-43BC-A3AB-B810CB2FAE62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
