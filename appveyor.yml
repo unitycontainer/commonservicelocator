@@ -30,9 +30,9 @@ artifacts:
 
 deploy:
 - provider: GitHub
-  force_update: true
+  force_update: false
   tag: $(appveyor_repo_tag_name)
-  release: v$(appveyor_build_version)
+  release: $(appveyor_repo_tag_name)
   auth_token:
     secure: 0RltkfAMN35pApf7xYqjwy1EgsVeniSYPv35Qb9ntHY1b4SC51QYLXVVfklvw09j
   artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
