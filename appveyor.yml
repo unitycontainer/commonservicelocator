@@ -4,6 +4,8 @@ platform: Any CPU
 
 before_build:
 - cmd: dotnet restore
+
+after_build:
 - choco install opencover.portable
 - choco install codecov
 
