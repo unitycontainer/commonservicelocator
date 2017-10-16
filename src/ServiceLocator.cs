@@ -1,5 +1,4 @@
 using System;
-using CommonServiceLocator.Properties;
 
 namespace CommonServiceLocator
 {
@@ -19,7 +18,7 @@ namespace CommonServiceLocator
         {
             get 
             {
-                if (!IsLocationProviderSet) throw new InvalidOperationException(Resources.ServiceLocationProviderNotSetMessage);
+                if (!IsLocationProviderSet) throw new InvalidOperationException(Constants.ServiceLocationProviderNotSetMessage);
 
                 return _currentProvider(); 
             }

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using CommonServiceLocator.Properties;
 
 namespace CommonServiceLocator
 {
@@ -146,7 +145,7 @@ namespace CommonServiceLocator
         /// <returns>The formatted exception message string.</returns>
         protected virtual string FormatActivationExceptionMessage(Exception actualException, Type serviceType, string key)
         {
-            return string.Format(CultureInfo.CurrentUICulture, Resources.ActivationExceptionMessage, serviceType.Name, key);
+            return string.Format(CultureInfo.CurrentUICulture, Constants.ActivationExceptionMessage, serviceType.Name, key);
         }
 
         /// <summary>
@@ -158,7 +157,7 @@ namespace CommonServiceLocator
         /// <returns>The formatted exception message string.</returns>
         protected virtual string FormatActivateAllExceptionMessage(Exception actualException, Type serviceType)
         {
-            return string.Format(CultureInfo.CurrentUICulture, Resources.ActivateAllExceptionMessage, serviceType.Name);
+            return string.Format(CultureInfo.CurrentUICulture, Constants.ActivateAllExceptionMessage, serviceType.Name);
         }
     }
 }

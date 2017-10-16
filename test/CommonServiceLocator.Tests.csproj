@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net47</TargetFrameworks>
     <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release;Package</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
