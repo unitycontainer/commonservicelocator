@@ -19,7 +19,6 @@
     <Authors>Microsoft.Practices.ServiceLocation</Authors>
     <Company>Microsoft.Practices.ServiceLocation</Company>
     <RootNamespace>CommonServiceLocator</RootNamespace>
-    <Configurations>Debug;Release;Package</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -32,32 +31,21 @@
     <Compile Remove="ActivationException.Desktop.cs" />
   </ItemGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)'=='Package'">
-    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <OutputPath>$(SolutionDir)\lib\</OutputPath>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)'=='Package'">
-    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugType>Full</DebugType>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <TargetFramework>net47</TargetFramework>
-  </PropertyGroup>
-
   <ItemGroup Condition="'$(TargetFramework)' != '' AND '$(TargetFramework)' != 'net40' ">
     <Compile Remove="net40\**" />
     <EmbeddedResource Remove="net40\**" />
     <None Remove="net40\**" />
   </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' != 'Debug' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <DebugType>Full</DebugType>
+    <TargetFramework>net47</TargetFramework>
+  </PropertyGroup>
 
 </Project>
