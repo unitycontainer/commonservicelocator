@@ -37,9 +37,10 @@
     <None Remove="net40\**" />
   </ItemGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' != 'Debug' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <TargetFrameworks>netcoreapp1.0;netstandard2.0;net40;net45;net47</TargetFrameworks>
+    <OutputPath>$(SolutionDir)\lib\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
