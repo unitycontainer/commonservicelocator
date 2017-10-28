@@ -1,0 +1,4 @@
+ignore:
+  - "tests/*"           # Ignore tests
+  - "src/Utility/*"     # Ignore utilities
+  - "**/*.Designer.cs"  # Ignore generated code
