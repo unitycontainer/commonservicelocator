@@ -50,7 +50,7 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <DebugType>Full</DebugType>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>netstandard1.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
