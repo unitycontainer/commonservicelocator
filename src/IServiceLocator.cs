@@ -8,6 +8,7 @@ namespace CommonServiceLocator
     /// to retrieve services (instances identified by type and optional
     /// name) from a container.
     /// </summary>
+    [CLSCompliant(true)]
     public interface IServiceLocator : IServiceProvider
     {
         /// <summary>
