@@ -1,12 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using CommonServiceLocator;
-using ServiceLocation.Tests.Components;
-using ServiceLocation.Tests.Mocks;
+using CommonServiceLocator.Tests.Components;
+using CommonServiceLocator.Tests.Mocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ServiceLocation.Tests
+namespace CommonServiceLocator.Tests
 {
 
     [TestClass]
