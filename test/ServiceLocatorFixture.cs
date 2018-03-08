@@ -1,9 +1,8 @@
 ﻿using System;
-using CommonServiceLocator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ServiceLocation.Tests.Mocks;
+using CommonServiceLocator.Tests.Mocks;
 
-namespace ServiceLocation.Tests
+namespace CommonServiceLocator.Tests
 {
     [TestClass]
     public class ServiceLocatorFixture
@@ -15,22 +14,22 @@ namespace ServiceLocation.Tests
         }
 
         [TestMethod]
-        public void ServiceLocatorIsLocationProviderSetReturnsTrueWhenSet()
+        public void ServiceLocatorIsLocatorProviderSetReturnsTrueWhenSet()
         {
             ServiceLocator.SetLocatorProvider(() => new MockServiceLocator(null));
 
-            Assert.IsTrue(ServiceLocator.IsLocationProviderSet);
+            Assert.IsTrue(ServiceLocator.IsLocatorProviderSet);
         }
 
         [TestMethod]
-        public void ServiceLocatorIsLocationProviderSetReturnsFalseWhenNotSet()
+        public void ServiceLocatorIsLocatorProviderSetReturnsFalseWhenNotSet()
         {
-            Assert.IsFalse(ServiceLocator.IsLocationProviderSet);
+            Assert.IsFalse(ServiceLocator.IsLocatorProviderSet);
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void ServiceLocatorCurrentThrowsWhenLocationProviderNotSet()
+        public void ServiceLocatorCurrentThrowsWhenLocatorProviderNotSet()
         {
             var currentServiceLocator = ServiceLocator.Current;
         }

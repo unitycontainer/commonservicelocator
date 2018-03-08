@@ -2,7 +2,7 @@
 
 using System;
 
-namespace ServiceLocation.Tests.Components
+namespace CommonServiceLocator.Tests.Components
 {
     public class AdvancedLogger : ILogger
     {

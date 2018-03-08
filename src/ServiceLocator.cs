@@ -18,7 +18,7 @@ namespace CommonServiceLocator
         {
             get 
             {
-                if (!IsLocationProviderSet) throw new InvalidOperationException(Constants.ServiceLocationProviderNotSetMessage);
+                if (!IsLocatorProviderSet) throw new InvalidOperationException(Constants.ServiceLocatorProviderNotSetMessage);
 
                 return _currentProvider(); 
             }
@@ -34,6 +34,10 @@ namespace CommonServiceLocator
             _currentProvider = newProvider;
         }
 
-        public static bool IsLocationProviderSet => _currentProvider != null;
-    }
+        public static bool IsLocatorProviderSet => _currentProvider != null;
+
+        [Obsolete("Use IsLocatorProviderSet instead.")]
+        public static bool IsLocationProviderSet => IsLocatorProviderSet;
+
+  }
 }

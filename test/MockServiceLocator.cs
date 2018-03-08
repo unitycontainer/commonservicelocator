@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CommonServiceLocator;
 
-namespace ServiceLocation.Tests.Mocks
+namespace CommonServiceLocator.Tests.Mocks
 {
     public class MockServiceLocator : ServiceLocatorImplBase
     {
