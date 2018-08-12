@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.0.3</Version>
-    <PackageReleaseNotes>This release contains a portable class library that targets .NET 4.0, 4.5, and 4.7, .NET Core 1.0, .NET Standard 1.0 and .NET Standard 2.0</PackageReleaseNotes>
+    <Version>2.0.4</Version>
+    <PackageReleaseNotes>This release contains a portable class library that targets .NET 4.0, 4.5, and 4.7, .NET Core 1.0 and 2.0, .NET Standard 1.0 and .NET Standard 2.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -25,6 +25,7 @@
     <AssemblyOriginatorKeyFile>package.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <RootNamespace>CommonServiceLocator</RootNamespace>
+    <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netstandard1.0;netstandard2.0;net40;net45;net46;net47</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard1.0' OR '$(TargetFramework)' == 'netstandard2.0'">
@@ -43,14 +44,13 @@
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <TargetFrameworks>netcoreapp1.0;netstandard1.0;netstandard2.0;net40;net45;net46;net47</TargetFrameworks>
     <OutputPath>$(SolutionDir)lib</OutputPath>
+    <DebugType>Portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <DebugType>Full</DebugType>
-    <TargetFramework>netstandard1.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
