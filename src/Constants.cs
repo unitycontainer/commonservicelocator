@@ -1,6 +1,6 @@
 ﻿namespace CommonServiceLocator
 {
-    public static class Constants
+    internal static class Constants
     {
         // Message shown if an exception occurs during a GetAllInstances call
         public const string ActivateAllExceptionMessage = 
