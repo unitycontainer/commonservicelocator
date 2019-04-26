@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/unitycontainer/Unity%20Container/_apis/build/status/unitycontainer.commonservicelocator?branchName=master)](https://dev.azure.com/unitycontainer/Unity%20Container/_build/latest?definitionId=4&branchName=master)
 [![Build status](https://ci.appveyor.com/api/projects/status/dax8w8u3d5c6kv0a/branch/master?svg=true)](https://ci.appveyor.com/project/IoC-Unity/commonservicelocator/branch/master)
 [![codecov](https://codecov.io/gh/unitycontainer/commonservicelocator/branch/master/graph/badge.svg)](https://codecov.io/gh/unitycontainer/commonservicelocator)
 [![license](https://img.shields.io/badge/license-ms-pl.svg)](https://opensource.org/licenses/MS-PL)
