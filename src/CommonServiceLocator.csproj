@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.0.4</Version>
+    <Version>2.0.5</Version>
     <PackageReleaseNotes>This release contains targets for .NET 4.0, 4.5, 4.7, and 4.8, .NET Core 1.0, 2.0 and 3.0, .NET Standard 1.0, .NET Standard 2.0 and .NET Standard 2.1</PackageReleaseNotes>
   </PropertyGroup>
 
