@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Version>2.0.4</Version>
-    <PackageReleaseNotes>This release contains a portable class library that targets .NET 4.0, 4.5, and 4.7, .NET Core 1.0 and 2.0, .NET Standard 1.0 and .NET Standard 2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>This release contains targets for .NET 4.0, 4.5, 4.7, and 4.8, .NET Core 1.0, 2.0 and 3.0, .NET Standard 1.0, .NET Standard 2.0 and .NET Standard 2.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -25,7 +25,7 @@
     <AssemblyOriginatorKeyFile>package.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <RootNamespace>CommonServiceLocator</RootNamespace>
-    <TargetFrameworks>netcoreapp1.0;netcoreapp2.0;netstandard1.0;netstandard2.0;net40;net45;net46;net47</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.0;netcoreapp2.0;netcoreapp1.0;netstandard1.0;netstandard2.0;netstandard2.1;net40;net45;net46;net47;net48</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard1.0' OR '$(TargetFramework)' == 'netstandard2.0'">
@@ -37,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' != '' AND '$(TargetFramework)' != 'net40' ">
+    <Compile Remove="Exceptions\ActivationException.Desktop.cs" />
     <Compile Remove="net40\**" />
     <EmbeddedResource Remove="net40\**" />
     <None Remove="net40\**" />

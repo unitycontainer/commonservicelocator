@@ -145,7 +145,7 @@ namespace CommonServiceLocator
         /// <returns>The formatted exception message string.</returns>
         protected virtual string FormatActivationExceptionMessage(Exception actualException, Type serviceType, string key)
         {
-            return string.Format(CultureInfo.CurrentUICulture, Constants.ActivationExceptionMessage, serviceType.Name, key);
+            return $"Activation error occurred while trying to get instance of type {serviceType.Name}, key \"{key}\"";
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace CommonServiceLocator
         /// <returns>The formatted exception message string.</returns>
         protected virtual string FormatActivateAllExceptionMessage(Exception actualException, Type serviceType)
         {
-            return string.Format(CultureInfo.CurrentUICulture, Constants.ActivateAllExceptionMessage, serviceType.Name);
+            return $"Activation error occurred while trying to get all instances of type {serviceType.Name}";
         }
     }
 }

@@ -18,7 +18,7 @@ namespace CommonServiceLocator
         {
             get 
             {
-                if (!IsLocationProviderSet) throw new InvalidOperationException(Constants.ServiceLocationProviderNotSetMessage);
+                if (!IsLocationProviderSet) throw new InvalidOperationException(" ServiceLocationProvider must be set.");
 
                 return _currentProvider(); 
             }
