@@ -26,7 +26,7 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '-verbosity:m'
+    msbuildArgs: '/verbosity:minimal'
 
 - task: VSTest@2
   inputs:
