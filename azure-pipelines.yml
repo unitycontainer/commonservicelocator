@@ -45,16 +45,9 @@ steps:
     PublishSymbols: false
     DetailedLog: false
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: 'bin\$(BuildConfiguration)'
+    PathtoPublish: 'lib'
     ArtifactName: '$(Parameters.ArtifactName)'
 
