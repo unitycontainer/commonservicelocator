@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/unitycontainer/Unity%20Container/_apis/build/status/unitycontainer.commonservicelocator?branchName=master)](https://dev.azure.com/unitycontainer/Unity%20Container/_build/latest?definitionId=4&branchName=master)
+[![Build Status](https://dev.azure.com/unitycontainer/Common%20Service%20Locator/_apis/build/status/Build%20Pipeline?branchName=master)](https://dev.azure.com/unitycontainer/Common%20Service%20Locator/_build/latest?definitionId=8&branchName=master)
 [![license](https://img.shields.io/badge/license-ms-pl.svg)](https://opensource.org/licenses/MS-PL)
 [![NuGet](https://img.shields.io/nuget/dt/commonservicelocator.svg)](https://www.nuget.org/packages/CommonServiceLocator)
 [![NuGet](https://img.shields.io/nuget/v/commonservicelocator.svg)](https://www.nuget.org/packages/CommonServiceLocator)
