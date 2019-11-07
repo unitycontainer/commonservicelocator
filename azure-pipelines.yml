@@ -24,7 +24,6 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-#    msbuildArgs: '/verbosity:minimal'
 
 - task: VSTest@2
   inputs:
@@ -44,7 +43,6 @@ steps:
     SourceFolder: 'lib'
     Contents: '*.nupkg'
     TargetFolder: '$(build.artifactstagingdirectory)'
-
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
