@@ -41,7 +41,7 @@ steps:
   displayName: 'Publish symbols path'
   inputs:
     SearchPattern: '**\bin\**\*.pdb'
-    IndexSources: false
+    IndexSources: true
     PublishSymbols: false
     DetailedLog: false
 
@@ -55,6 +55,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+    PathtoPublish: 'bin\$(BuildConfiguration)'
     ArtifactName: '$(Parameters.ArtifactName)'
 
