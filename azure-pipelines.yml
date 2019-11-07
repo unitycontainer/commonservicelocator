@@ -10,7 +10,8 @@ variables:
   solution: './package.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
+  'Common Service Locator'
+  
 steps:
 - task: NuGetToolInstaller@1
 
@@ -37,17 +38,17 @@ steps:
     PublishSymbols: false
   continueOnError: true
 
-- task: PublishSymbols@2
-  displayName: 'Publish symbols path'
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    IndexSources: true
-    PublishSymbols: false
-    DetailedLog: false
+    SourceFolder: 'lib'
+    Contents: '*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: 'lib'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: '$(Parameters.ArtifactName)'
 
