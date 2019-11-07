@@ -29,13 +29,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: PublishSymbols@2
-  displayName: 'Publish symbols path'
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    PublishSymbols: false
-  continueOnError: true
-
 - task: CopyFiles@2
   displayName: 'Copy package to staging directory'
   inputs:
