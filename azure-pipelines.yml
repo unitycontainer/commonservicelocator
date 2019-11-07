@@ -30,7 +30,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: CopyFiles@2
-  displayName: 'Copy package to staging directory'
+  displayName: 'Stage package'
   inputs:
     SourceFolder: 'lib'
     Contents: '*.nupkg'
