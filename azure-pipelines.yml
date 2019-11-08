@@ -32,7 +32,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Stage package'
   inputs:
-    SourceFolder: 'src\bin\Release'
+    SourceFolder: 'lib'
     Contents: '*.nupkg'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
