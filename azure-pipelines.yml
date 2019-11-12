@@ -18,6 +18,12 @@ steps:
       $timestamp = git log -1 --pretty="format:%ct"
       Write-Host "Build Version: $timestamp" 
       Write-Host "##vso[task.setvariable variable=BuildVersion]$($timestamp)"
+      $isTag = [regex]::IsMatch($Env:BUILD_SOURCEBRANCH, "^(refs\/tags\/)")
+      Write-Host "##vso[task.setvariable variable=isTag]$($isTag)"
+
+- task: CmdLine@2
+  inputs:
+    script: 'set'
 
 #- task: PowerShell@2
 #  displayName: 'Version Info'
@@ -29,6 +35,7 @@ steps:
 #      Write-Host "Version: $version" 
 #      Write-Host "Time Stamp: $timestamp" 
 #      Write-Host "##vso[task.setvariable variable=STAGE_VERSION]$($version)-$($timestamp)"
+
 
 - task: NuGetToolInstaller@1
   displayName: 'Install NuGet'
