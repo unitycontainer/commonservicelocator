@@ -11,17 +11,17 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   OutputPath: '$(build.artifactstagingdirectory)'
-  FileVersion: 0
+  Git.Version: 0
   
 steps:
 - task: PowerShell@2
-  displayName: 'Set File Version'
+  displayName: 'Set Build Version'
   inputs:
     targetType: 'inline'
     script: |
       $timestamp = git log -1 --pretty="format:%ct"
-      Write-Host "File Version: $timestamp" 
-      Write-Host "##vso[task.setvariable variable=FileVersion]$($timestamp)"
+      Write-Host "Build Version: $timestamp" 
+      Write-Host "##vso[task.setvariable variable=Git.Version]$($timestamp)"
 
 - task: CmdLine@2
   inputs:
