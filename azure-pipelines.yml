@@ -7,7 +7,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.csproj'
+  solution: '.\package.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   OutputPath: '$(build.artifactstagingdirectory)'
