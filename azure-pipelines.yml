@@ -53,6 +53,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(system.defaultworkingdirectory)\src\bin'
+    PathtoPublish: '$(system.defaultworkingdirectory)\src\bin\$(buildPlatform)\$(buildConfiguration)'
     ArtifactName: 'Binaries'
 
