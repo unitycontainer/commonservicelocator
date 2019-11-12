@@ -10,7 +10,6 @@ variables:
   solution: '**/*.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  OutputPath: '$(build.artifactstagingdirectory)'
   BuildVersion: 0
   
 steps:
@@ -23,10 +22,6 @@ steps:
       Write-Host "Build Version: $timestamp" 
       Write-Host "##vso[task.setvariable variable=BuildVersion]$($timestamp)"
 
-- task: CmdLine@2
-  inputs:
-    script: 'set'
-    
 #- task: PowerShell@2
 #  displayName: 'Version Info'
 #  inputs:
@@ -58,6 +53,6 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+    PathtoPublish: '$(system.defaultworkingdirectory)\src\bin'
     ArtifactName: 'Binaries'
 
