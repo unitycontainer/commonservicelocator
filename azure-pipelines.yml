@@ -7,9 +7,10 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: './package.sln'
+  solution: '**/*.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  OutputPath: '$(build.artifactstagingdirectory)'
   
 steps:
 - task: NuGetToolInstaller@1
@@ -29,16 +30,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: CopyFiles@2
-  displayName: 'Stage package'
-  inputs:
-    SourceFolder: 'lib'
-    Contents: '*.nupkg'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'CommonServiceLocator'
+    ArtifactName: 'Package'
 
