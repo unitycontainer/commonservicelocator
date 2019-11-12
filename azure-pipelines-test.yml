@@ -10,6 +10,7 @@ variables:
   solution: './package.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+#  OutputPath: '$(build.artifactstagingdirectory)'
   
 steps:
 - task: NuGetToolInstaller@1
