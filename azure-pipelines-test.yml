@@ -7,7 +7,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: './package.sln'
+  solution: '**/*.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 #  OutputPath: '$(build.artifactstagingdirectory)'
@@ -41,5 +41,5 @@ steps:
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'CommonServiceLocator'
+    ArtifactName: 'Package'
 
