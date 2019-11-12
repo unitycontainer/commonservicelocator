@@ -3,7 +3,6 @@
   <Import Project="..\package.props" />
 
   <PropertyGroup>
-    <FileVersion>$(Version).0</FileVersion>
     <AssemblyVersion>$(Version).0</AssemblyVersion>
     <PackageId>CommonServiceLocator</PackageId>
     <Summary>The Common Service Locator library contains a shared interface for service location. The library provides an abstraction over IoC containers and service locators.</Summary>
@@ -24,6 +23,12 @@
     <RootNamespace>CommonServiceLocator</RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <FileVersion Condition="'$(BuildVersion)' == ''">$(Version).0</FileVersion>
+    <FileVersion Condition="'$(BuildVersion)' != ''">$(Version).$(BuildVersion)</FileVersion>
+  </ItemGroup>
+
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard1.0' OR '$(TargetFramework)' == 'netstandard2.0'">
     <Compile Remove="ActivationException.Desktop.cs" />
