@@ -10,7 +10,7 @@ variables:
   solution: '**/*.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-#  OutputPath: '$(build.artifactstagingdirectory)'
+  OutputPath: '$(build.artifactstagingdirectory)'
   
 steps:
 - task: NuGetToolInstaller@1
