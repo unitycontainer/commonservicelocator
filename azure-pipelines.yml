@@ -23,6 +23,10 @@ steps:
       Write-Host "Build Version: $timestamp" 
       Write-Host "##vso[task.setvariable variable=BuildVersion]$($timestamp)"
 
+- task: CmdLine@2
+  inputs:
+    script: 'set'
+    
 #- task: PowerShell@2
 #  displayName: 'Version Info'
 #  inputs:
