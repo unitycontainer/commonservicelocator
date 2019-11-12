@@ -11,28 +11,49 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   OutputPath: '$(build.artifactstagingdirectory)'
+  BuildVersion: 0
   
 steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
+- task: PowerShell@2
+  displayName: 'Set Build Version'
   inputs:
-    restoreSolution: '$(solution)'
+    targetType: 'inline'
+    script: |
+      $timestamp = git log -1 --pretty="format:%ct"
+      Write-Host "Build Version: $timestamp" 
+      Write-Host "##vso[task.setvariable variable=BuildVersion]$($timestamp)"
 
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#- task: PowerShell@2
+#  displayName: 'Version Info'
+#  inputs:
+#    targetType: 'inline'
+#    script: |
+#      $version = (Select-Xml -Path ".\package.props" -XPath "/Project/PropertyGroup/VersionBase" | Select-Object -ExpandProperty Node).InnerText
+#      $timestamp = git log -1 --pretty="format:%ct"
+#      Write-Host "Version: $version" 
+#      Write-Host "Time Stamp: $timestamp" 
+#      Write-Host "##vso[task.setvariable variable=STAGE_VERSION]$($version)-$($timestamp)"
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#- task: NuGetToolInstaller@1
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'Package'
+#- task: NuGetCommand@2
+#  inputs:
+#    restoreSolution: '$(solution)'
+
+#- task: VSBuild@1
+#  inputs:
+#    solution: '$(solution)'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
+
+#- task: VSTest@2
+#  inputs:
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
+
+#- task: PublishBuildArtifacts@1
+#  displayName: 'Publish Artifact'
+#  inputs:
+#    PathtoPublish: '$(build.artifactstagingdirectory)'
+#    ArtifactName: 'Binaries'
 
