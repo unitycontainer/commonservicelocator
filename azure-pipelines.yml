@@ -38,26 +38,26 @@ steps:
 #      Write-Host "Time Stamp: $timestamp" 
 #      Write-Host "##vso[task.setvariable variable=STAGE_VERSION]$($version)-$($timestamp)"
 
-#- task: NuGetToolInstaller@1
+- task: NuGetToolInstaller@1
 
-#- task: NuGetCommand@2
-#  inputs:
-#    restoreSolution: '$(solution)'
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
 
-#- task: VSBuild@1
-#  inputs:
-#    solution: '$(solution)'
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 #- task: VSTest@2
 #  inputs:
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
 
-#- task: PublishBuildArtifacts@1
-#  displayName: 'Publish Artifact'
-#  inputs:
-#    PathtoPublish: '$(build.artifactstagingdirectory)'
-#    ArtifactName: 'Binaries'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'Binaries'
 
