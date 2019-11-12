@@ -22,6 +22,7 @@
     <AssemblyOriginatorKeyFile>package.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <RootNamespace>CommonServiceLocator</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard1.0' OR '$(TargetFramework)' == 'netstandard2.0'">
@@ -40,13 +41,10 @@
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <OutputPath>$(SolutionDir)lib</OutputPath>
     <DebugType>Portable</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <DebugType>Full</DebugType>
   </PropertyGroup>
 
