@@ -1,8 +1,5 @@
 # Build pipeline
 
-trigger:
-- master
-
 pool:
   vmImage: 'windows-latest'
 
@@ -34,18 +31,22 @@ steps:
 #      Write-Host "##vso[task.setvariable variable=STAGE_VERSION]$($version)-$($timestamp)"
 
 - task: NuGetToolInstaller@1
+  displayName: 'Install NuGet'
 
 - task: NuGetCommand@2
+  displayName: 'Restore Dependencies'
   inputs:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
+  displayName: 'Build'
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
+  displayName: 'Test'
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
