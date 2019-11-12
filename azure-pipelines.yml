@@ -1,5 +1,9 @@
 # Build pipeline
 
+trigger:
+- master
+- refs/tags/*
+
 pool:
   vmImage: 'windows-latest'
 
