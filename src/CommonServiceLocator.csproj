@@ -24,10 +24,10 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
-  <ItemGroup>
+  <PropertyGroup>
     <FileVersion Condition="'$(BuildVersion)' == ''">$(Version).0</FileVersion>
     <FileVersion Condition="'$(BuildVersion)' != ''">$(Version).$(BuildVersion)</FileVersion>
-  </ItemGroup>
+  </PropertyGroup>
 
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.0' OR '$(TargetFramework)' == 'netstandard1.0' OR '$(TargetFramework)' == 'netstandard2.0'">
