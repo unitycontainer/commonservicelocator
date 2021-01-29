@@ -7,7 +7,7 @@
     <PackageId>CommonServiceLocator</PackageId>
     <Summary>The Common Service Locator library contains a shared interface for service location. The library provides an abstraction over IoC containers and service locators.</Summary>
     <Description>The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references.</Description>
-    <Copyright>Copyright © Microsoft 2008</Copyright>
+    <Copyright>Copyright © .NET Foundation and Contributors. All Rights Reserved</Copyright>
     <PackageProjectUrl>https://github.com/unitycontainer/commonservicelocator</PackageProjectUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MS-PL</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/unitycontainer/commonservicelocator</RepositoryUrl>
