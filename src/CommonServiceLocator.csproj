@@ -15,13 +15,12 @@
     <PackageTags>Unity Container unitycontainer Microsoft.Practices.Unity IoC Microsoft.Practices.ServiceLocation Service Location</PackageTags>
     <Product>Microsoft.Practices.ServiceLocation</Product>
     <RepositoryType>git</RepositoryType>
-    <Authors>Microsoft.Practices.ServiceLocation</Authors>
-    <Company>Microsoft.Practices.ServiceLocation</Company>
+    <Authors>.NET Foundation and Contributors</Authors>
+    <Company>.NET Foundation and Contributors</Company>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>package.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <RootNamespace>CommonServiceLocator</RootNamespace>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -46,6 +45,7 @@
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DebugType>Portable</DebugType>
   </PropertyGroup>
 
