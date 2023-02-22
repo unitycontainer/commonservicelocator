@@ -1,6 +1,5 @@
 image: Visual Studio 2022
 configuration: Release
-platform: Any CPU
 
 install:
   - ps: $env:build_version = (Select-Xml -Path ".\src\CommonServiceLocator.csproj" -XPath "/Project/PropertyGroup/Version" | Select-Object -ExpandProperty Node).InnerText
