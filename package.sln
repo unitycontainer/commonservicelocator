@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonServiceLocator", "src\CommonServiceLocator.csproj", "{FAF6D6B2-1EC9-4A1B-83BB-48F772E948CF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonServiceLocator.Tests", "test\CommonServiceLocator.Tests.csproj", "{69BC47D2-947A-43BC-A3AB-B810CB2FAE62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48F538EA-AD83-42AD-AB2E-4787331C946A}"
+	ProjectSection(SolutionItems) = preProject
+		package.props = package.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

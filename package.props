@@ -1,12 +1,12 @@
 <Project>
 
   <PropertyGroup>
-    <Version>2.0.6</Version>
-    <TargetFrameworks>netcoreapp3.0;netcoreapp2.0;netcoreapp1.0;netstandard1.0;netstandard2.0;netstandard2.1;net40;net45;net46;net47;net48;net50</TargetFrameworks>
+    <Version>2.0.7</Version>
+    <TargetFrameworks>netcoreapp3.0;netcoreapp2.0;netcoreapp1.0;netstandard1.0;netstandard2.0;netstandard2.1;net46;net47;net48;net50;net6.0;net7.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageReleaseNotes>This release contains targets for .NET 4.0, 4.5, 4.7, and 4.8, 5.0, .NET Core 1.0, 2.0 and 3.0, .NET Standard 1.0, .NET Standard 2.0 and .NET Standard 2.1</PackageReleaseNotes>
+    <PackageReleaseNotes>This release contains targets for .NET 4.7, and 4.8, 5.0, 6.0, 7.0 .NET Core 1.0, 2.0 and 3.0, .NET Standard 1.0, .NET Standard 2.0 and .NET Standard 2.1</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
